@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.pet", "api.pet\api.pet.csproj", "{729FCEA8-A5D4-4B7B-99B1-606964E9FD4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{16A1165A-56EA-4AD1-915F-F3359F3E2D87}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureVMPublishModule.psm1 = PublishScripts\AzureVMPublishModule.psm1
+		PublishScripts\Publish-WebApplicationVM.ps1 = PublishScripts\Publish-WebApplicationVM.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{CC62E07E-B561-414C-A198-25523F874A64}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\apipet-WAWS-dev.json = PublishScripts\Configurations\apipet-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{729FCEA8-A5D4-4B7B-99B1-606964E9FD4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729FCEA8-A5D4-4B7B-99B1-606964E9FD4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729FCEA8-A5D4-4B7B-99B1-606964E9FD4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729FCEA8-A5D4-4B7B-99B1-606964E9FD4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC62E07E-B561-414C-A198-25523F874A64} = {16A1165A-56EA-4AD1-915F-F3359F3E2D87}
+	EndGlobalSection
+EndGlobal
