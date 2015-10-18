@@ -11,10 +11,9 @@ namespace api.pet.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            var principal = Request.GetRequestContext().Principal as ClaimsPrincipal;
-            var customClaimValue = (principal.Claims.Single(p => p.Type.Contains("/claims/name"))).Value;
-
-            return new string[] { "value1", "value2" };
+            //var principal = Request.GetRequestContext().Principal as ClaimsPrincipal;
+            //var customClaimValue = (principal.Claims.Single(p => p.Type.Contains("/claims/name"))).Value;
+            return new string[] { "value1", "value2", "value3" };
         }
 
         // GET api/values/5
