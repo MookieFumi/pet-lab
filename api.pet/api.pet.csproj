@@ -150,6 +150,7 @@
     </Compile>
     <Compile Include="Infrastructure\ActionResult\ResultWithChallenge.cs" />
     <Compile Include="Infrastructure\Attributes\VeemerBasicAuthentication.cs" />
+    <Compile Include="Infrastructure\Utilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

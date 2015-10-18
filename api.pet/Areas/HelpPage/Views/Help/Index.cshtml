@@ -1,7 +1,7 @@
 @using System.Web.Http.Controllers
 @using System.Web.Http.Description
 @using System.Collections.ObjectModel
-@using System.Configuration
+@using api.pet.Infrastructure
 
 @model Collection<ApiDescription>
 
@@ -9,9 +9,9 @@
 {
     string GetInfo()
     {
-        var realm = @Environment.ExpandEnvironmentVariables(ConfigurationManager.AppSettings["realm"]);
-        var username = @Environment.ExpandEnvironmentVariables(ConfigurationManager.AppSettings["username"]);
-        var password = @Environment.ExpandEnvironmentVariables(ConfigurationManager.AppSettings["password"]);
+        var realm = Utilities.GetAppRealm();
+        var username = Utilities.GetAppUserName();
+        var password = Utilities.GetAppPassword();
 
         return string.Format("{0}:{1} - {2}", username, password, realm);
     }

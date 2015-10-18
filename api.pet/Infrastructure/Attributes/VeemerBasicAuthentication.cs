@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text;
@@ -20,12 +19,12 @@ namespace api.pet.Infrastructure.Attributes
 
         private string GetUserName()
         {
-         return Environment.ExpandEnvironmentVariables(ConfigurationManager.AppSettings["username"]);
+            return Utilities.GetAppUserName();
         }
 
         private string GetPassword()
         {
-            return Environment.ExpandEnvironmentVariables(ConfigurationManager.AppSettings["password"]);
+            return Utilities.GetAppPassword();
         }
 
         public VeemerBasicAuthentication(string realm)
@@ -53,7 +52,7 @@ namespace api.pet.Infrastructure.Attributes
                         new Claim(ClaimTypes.Name, "Miguel Angel Martín Hrdez")
                     };
                     var identity = new ClaimsIdentity(claims, "Basic");
-                    var principal = new ClaimsPrincipal(new[] {identity});
+                    var principal = new ClaimsPrincipal(new[] { identity });
                     context.Principal = principal;
                 }
                 else
