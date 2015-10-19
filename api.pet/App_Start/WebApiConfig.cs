@@ -10,8 +10,8 @@ namespace api.pet
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            var realm = Environment.ExpandEnvironmentVariables(ConfigurationManager.AppSettings["realm"]);
-            config.Filters.Add(new VeemerBasicAuthentication(realm));
+            //var realm = Environment.ExpandEnvironmentVariables(ConfigurationManager.AppSettings["realm"]);
+            //config.Filters.Add(new VeemerBasicAuthentication(realm));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
