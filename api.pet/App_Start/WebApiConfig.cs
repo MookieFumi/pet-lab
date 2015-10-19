@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Web.Http;
+using api.pet.Infrastructure;
 using api.pet.Infrastructure.Attributes;
 
 namespace api.pet
@@ -10,8 +11,8 @@ namespace api.pet
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            //var realm = Environment.ExpandEnvironmentVariables(ConfigurationManager.AppSettings["realm"]);
-            //config.Filters.Add(new VeemerBasicAuthentication(realm));
+            var realm = Utilities.GetAppRealm();
+            config.Filters.Add(new VeemerBasicAuthentication(realm));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
